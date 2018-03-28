@@ -1,0 +1,19 @@
+﻿@model Yoyo.ViewModels.RequiredTestViewModel
+@{
+    ViewBag.Title = "Test required";
+}
+
+
+
+<div class="row">
+    @using (Html.BeginForm("Form", "Home", FormMethod.Post))
+            {
+        <div class="col-md-12">
+
+            @Html.LabelFor(m => m.MonChampRequired)
+            @Html.TextBoxFor(m => m.MonChampRequired)
+            @Html.ValidationMessageFor(m => m.MonChampRequired)
+        </div>
+            <button type="submit">Envoyer</button>
+    }
+</div>
